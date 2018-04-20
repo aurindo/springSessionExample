@@ -22,7 +22,7 @@ public class SessionControllerTest {
     @Before
     public void clearRedisData() {
         testRestTemplate = new TestRestTemplate();
-        testRestTemplateWithAuth = new TestRestTemplate("admin", "password", null);
+        testRestTemplateWithAuth = new TestRestTemplate("admin", "password");
 
         jedis = new Jedis("localhost", 6379);
         jedis.flushAll();
